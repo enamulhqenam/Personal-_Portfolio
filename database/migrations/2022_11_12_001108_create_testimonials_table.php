@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('testimonials', function (Blueprint $table) {
-            $table->bigIncrements('ID');
-            $table->string('Name');
-            $table->string('Designaion');
-            $table->string('Company');
-            $table->longText('Testimony');
-            $table->string('Picture');
+            $table->id();
+            $table->string('Name')->nullable();
+            $table->string('Designaion')->nullable();
+            $table->string('Company')->nullable();
+            $table->longText('Testimony')->nullable();
+            $table->string('Picture')->nullable();
             $table->timestamps();
         });
     }

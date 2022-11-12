@@ -18,15 +18,15 @@ return new class extends Migration
             $table->string('Name')->nullable();
             $table->text('AboutMe')->nullable();
             $table->string('Title')->nullable();
-            $table->longText('Description');
-            $table->string('Photo');
-            $table->date('Birthday');
-            $table->string('Degree');
-            $table->string('Phone');
-            $table->string('Email');
-            $table->string('City');
-            $table->string('Website');
-            $table->boolean('Freelance');
+            $table->longText('Description')->nullable();
+            $table->string('Photo')->nullable();
+            $table->date('Birthday')->nullable();
+            $table->string('Degree')->nullable();
+            $table->string('Phone')->nullable();
+            $table->string('Email')->nullable();
+            $table->string('City')->nullable();
+            $table->string('Website')->nullable();
+            $table->boolean('Freelance')->nullable();
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('professional_experiences', function (Blueprint $table) {
             $table->id();
-            $table->string('Title');
-            $table->date('Duration');
-            $table->string('Location');
-            $table->longText('Responsibilities');
+            $table->string('Title')->nullable();
+            $table->date('Duration')->nullable();
+            $table->string('Location')->nullable();
+            $table->longText('Responsibilities')->nullable();
             $table->timestamps();
         });
     }
