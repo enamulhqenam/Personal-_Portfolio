@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('portfolios', function (Blueprint $table) {
-            $table->bigIncrements('ID');
-            $table->string('Category');
-            $table->string('Picture');
-            $table->string('Title');
-            $table->string('Links');
+            $table->id();
+            $table->string('Category')->nullable();
+            $table->string('Picture')->nullable();
+            $table->string('Title')->nullable();
+            $table->string('Links')->nullable();
             $table->timestamps();
         });
     }

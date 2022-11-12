@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
-            $table->string('DegreeName');
-            $table->date('Session');
-            $table->string('InstituteName');
-            $table->longText('Description');
+            $table->string('DegreeName')->nullable();
+            $table->date('Session')->nullable();
+            $table->string('InstituteName')->nullable();
+            $table->longText('Description')->nullable();
             $table->timestamps();
         });
     }

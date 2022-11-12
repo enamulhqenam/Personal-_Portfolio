@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('resumes', function (Blueprint $table) {
             $table->id();
             $table->longText('Descripton')->nullable();
-            $table->string('Summary');
+            $table->string('Summary')->nullable();
             $table->timestamps();
         });
     }
