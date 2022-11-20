@@ -9,7 +9,7 @@ class Skills extends Model
 {
     use HasFactory;
 
-    protected $table ='Skills';
+    protected $table ='skills';
 
     protected $fillable =[
         'SkillsName',
