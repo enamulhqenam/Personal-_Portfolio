@@ -55,7 +55,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {!! Form::open(array(('url' => '/about' ))) !!}
+                {!! Form::open(array(('url' => '/about','method'=>'POST' ))) !!}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Name" class="form-label col-md-3">Name</label>
