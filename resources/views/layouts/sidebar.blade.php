@@ -26,7 +26,7 @@
                 {{-- normal table  --}}
                 <li class="nav-header">Dashboard</li>
                 <li class="nav-item">
-                    <a href="/portfolio/about/list" class="nav-link{{Request::is('portfolio')?'active':''}}">
+                    <a href="/about" class="nav-link{{Request::is('')?'active':''}}">
                         <i class="nav-icon far fa-user"></i>
                         <p>
                             About Me
@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/portfolio/fact/list" class="nav-link{{Request::is('portfolio')?'active':''}}">
+                    <a href="/fact" class="nav-link{{Request::is('fact')?'active':''}}">
                         <i class="nav-icon far fa-lightbulb"></i>
                         <p>
                             Facts

@@ -37,20 +37,25 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 /* ----------About Route------------ */
-Route::get('/portfolio/about/list',[AboutController::class,'index']);
-Route::get('/portfolio/about/create',[AboutController::class,'create']);
-Route::post('/portfolio/about/store',[AboutController::class,'store']);
-Route::get('/portfolio/about/show',[AboutController::class,'Show']);
-Route::post('/portfolio/about/update',[AboutController::class,'update']);
-Route::get('/portfolio/about/edit/{id}',[AboutController::class,'edit']);
+Route::resource('/about', AboutController::class);
+
+// Route::get('/portfolio/about/list',[AboutController::class,'index']);
+// Route::get('/portfolio/about/create',[AboutController::class,'create']);
+// Route::post('/portfolio/about/store',[AboutController::class,'store']);
+// Route::get('/portfolio/about/show',[AboutController::class,'Show']);
+// Route::post('/portfolio/about/update',[AboutController::class,'update']);
+// Route::get('/portfolio/about/edit/{id}',[AboutController::class,'edit']);
 
 /* ----------Fact Route------------ */
-Route::get('/portfolio/fact/list',[FactsController::class,'index']);
-Route::get('/portfolio/fact/create',[FactsController::class,'create']);
-Route::post('/portfolio/fact/store',[FactsController::class,'store']);
-Route::get('/portfolio/fact/show',[FactsController::class,'Show']);
-Route::post('/portfolio/fact/update',[FactsController::class,'update']);
-Route::get('/portfolio/fact/edit/{id}',[FactsController::class,'edit']);
+
+Route::resource('/fact', FactsController::class);
+
+// Route::get('/portfolio/fact/list',[FactsController::class,'index']);
+// Route::get('/portfolio/fact/create',[FactsController::class,'create']);
+// Route::post('/portfolio/fact/store',[FactsController::class,'store']);
+// Route::get('/portfolio/fact/show',[FactsController::class,'Show']);
+// Route::post('/portfolio/fact/update',[FactsController::class,'update']);
+// Route::get('/portfolio/fact/edit/{id}',[FactsController::class,'edit']);
 
 /* ----------Skill Route------------ */
 Route::get('/portfolio/skill/list',[SkillsController::class,'index']);
