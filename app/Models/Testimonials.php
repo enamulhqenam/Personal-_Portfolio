@@ -9,7 +9,7 @@ class Testimonials extends Model
 {
     use HasFactory;
 
-    protected $table ='Testimonials';
+    protected $table ='testimonials';
 
     protected $fillable = [
         'Names',

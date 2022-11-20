@@ -46,7 +46,8 @@ class AboutController extends Controller
      */
     public function show(About $about)
     {
-        //
+        $ShowAbout = About::all();
+        return view('portfolio.about');
     }
 
     /**
