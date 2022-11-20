@@ -1,6 +1,6 @@
 <img src="Portfolio.png">
 
-##Personal_Portfolio = A Protfolio Management system 
+<h3>Personal_Portfolio = A Protfolio Management system </h3>
 
 
 
