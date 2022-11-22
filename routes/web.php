@@ -39,71 +39,29 @@ require __DIR__.'/auth.php';
 /* ----------About Route------------ */
 Route::resource('/about', AboutController::class);
 
-// Route::get('/portfolio/about/list',[AboutController::class,'index']);
-// Route::get('/portfolio/about/create',[AboutController::class,'create']);
-// Route::post('/portfolio/about/store',[AboutController::class,'store']);
-// Route::get('/portfolio/about/show',[AboutController::class,'Show']);
-// Route::post('/portfolio/about/update',[AboutController::class,'update']);
-// Route::get('/portfolio/about/edit/{id}',[AboutController::class,'edit']);
-
 /* ----------Fact Route------------ */
 
 Route::resource('/fact', FactsController::class);
 
-// Route::get('/portfolio/fact/list',[FactsController::class,'index']);
-// Route::get('/portfolio/fact/create',[FactsController::class,'create']);
-// Route::post('/portfolio/fact/store',[FactsController::class,'store']);
-// Route::get('/portfolio/fact/show',[FactsController::class,'Show']);
-// Route::post('/portfolio/fact/update',[FactsController::class,'update']);
-// Route::get('/portfolio/fact/edit/{id}',[FactsController::class,'edit']);
 
 /* ----------Skill Route------------ */
-Route::get('/portfolio/skill/list',[SkillsController::class,'index']);
-Route::get('/portfolio/skill/create',[SkillsController::class,'create']);
-Route::post('/portfolio/skill/store',[SkillsController::class,'store']);
-Route::get('/portfolio/skill/show',[SkillsController::class,'Show']);
-Route::post('/portfolio/skill/update',[SkillsController::class,'update']);
-Route::get('/portfolio/skill/edit/{id}',[SkillsController::class,'edit']);
+Route::resource('/skill', SkillsController::class);
 
-/* ----------resume Route------------ */
-Route::get('/portfolio/resume/list',[ResumeController::class,'index']);
-Route::get('/portfolio/resume/create',[ResumeController::class,'create']);
-Route::post('/portfolio/resume/store',[ResumeController::class,'store']);
-Route::get('/portfolio/resume/show',[ResumeController::class,'Show']);
-Route::post('/portfolio/resume/update',[ResumeController::class,'update']);
-Route::get('/portfolio/resume/edit/{id}',[ResumeController::class,'edit']);
+
+/* ----------summary Route------------ */
+Route::resource('/resume/summary',ResumeController::class,);
 
 /* ----------Education Route------------ */
-Route::get('/portfolio/education/list',[EducationController::class,'index']);
-Route::get('/portfolio/education/create',[EducationController::class,'create']);
-Route::post('/portfolio/education/store',[EducationController::class,'store']);
-Route::get('/portfolio/education/show',[EducationController::class,'Show']);
-Route::post('/portfolio/education/update',[EducationController::class,'update']);
-Route::get('/portfolio/education/edit/{id}',[EducationController::class,'edit']);
+Route::resource('/resume/education',EducationController::class);
 
 /* ----------Experience Route------------ */
-Route::get('/portfolio/experience/list',[ProfessionalExperienceController::class,'index']);
-Route::get('/portfolio/experience/create',[ProfessionalExperienceController::class,'create']);
-Route::post('/portfolio/experience/store',[ProfessionalExperienceController::class,'store']);
-Route::get('/portfolio/experience/show',[ProfessionalExperienceController::class,'Show']);
-Route::post('/portfolio/experience/update',[ProfessionalExperienceController::class,'update']);
-Route::get('/portfolio/experience/edit/{id}',[ProfessionalExperienceController::class,'edit']);
+Route::resource('/resume/experrience',ProfessionalExperienceController::class);
 
 /* ----------Portfolio Route------------ */
-Route::get('/portfolio/portfolio/list',[PortfolioController::class,'index']);
-Route::get('/portfolio/portfolio/create',[PortfolioController::class,'create']);
-Route::post('/portfolio/portfolio/store',[PortfolioController::class,'store']);
-Route::get('/portfolio/portfolio/show',[PortfolioController::class,'Show']);
-Route::post('/portfolio/portfolio/update',[PortfolioController::class,'update']);
-Route::get('/portfolio/portfolio/edit/{id}',[PortfolioController::class,'edit']);
+Route::resource('/portfolio',PortfolioController::class);
 
 /* ----------Service Route------------ */
-Route::get('/portfolio/service/list',[ServicesController::class,'index']);
-Route::get('/portfolio/service/create',[ServicesController::class,'create']);
-Route::post('/portfolio/service/store',[ServicesController::class,'store']);
-Route::get('/portfolio/service/show',[ServicesController::class,'Show']);
-Route::post('/portfolio/service/update',[ServicesController::class,'update']);
-Route::get('/portfolio/service/edit/{id}',[ServicesController::class,'edit']);
+Route::resource('/service',ServicesController::class);
 
 /* ----------Testimonials Route------------ */
 Route::get('/portfolio/testimonial/list',[TestimonialsController::class,'index']);

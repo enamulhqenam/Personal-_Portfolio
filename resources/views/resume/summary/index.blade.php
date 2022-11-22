@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title'){{'fact'}} @endsection
+@section('title'){{'Summary'}} @endsection
 @section('content')
     <div class="container py-5 col-md-12">
       <div class="row">
@@ -9,22 +9,18 @@
               <div class="card-title">
                 <h2 class="card-title">
                   <button type="button" class="btn bg-navy text-capitalize mr-3" id="AddNewBtn"><i class="fa-solid fa-circle-plus mr-2"></i>Add New</button>
-                  Fact List
+                  Resume List
                 </h2>
               </div>
               <a href="" class="btn btn-sm bg-navy float-right text-capitalize"><i class="fa fa-recycle mr-2" aria-hidden="true"></i>Vew Trash</a>
               <a href="" class="btn btn-sm bg-maroon float-right text-capitalize mr-3"><i class="fa fa-trash " aria-hidden="true"></i></a>
               {{-- table section start --}}
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover table-responsive table-borderless" id="FactList">
+                <table class="table table-hover table-responsive table-borderless" id="SummaryList">
                   <thead>
                     <tr>
-                      <th>Icon</th>
-                      <th>Happy Clients</th>
-                      <th>Projects</th>
-                      <th>Support Hours</th>
-                      <th>Hard Workers</th>
                       <th>Description</th>
+                      <th>Summary</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -40,46 +36,28 @@
           </div>
         </div>
         {{-- registration field Modal --}}
-        <div class="modal fade show" id="NewFactModal" role="dialog">
+        <div class="modal fade show" id="NewSummaryModal" role="dialog">
           <div class="modal-dialog modal-x1">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Fact</h4>
+                <h4 class="modal-title">New Summary</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">x</span>
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/fact','method' => 'POST','class' => 'form-horizontal','id' => 'FactForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/resume/summary','method' => 'POST','class' => 'form-horizontal','id' => 'SummaryForm' , 'file'=> true )) }}
                   <div class="card-body">
-                    <div class="form-group row">
-                      <label for="icon" class="form-label col-md-3">Icon</label>
-                      <div class="col-md-8">
-                        <input type="img" name="Icon" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="HappyClients" class="form-label col-md-3">Happy Clients</label>
-                      <div class="col-md-8">
-                        <input type="text" name="HappyClients" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="Projects" class="form-label col-md-3">Projects</label>
-                      <div class="col-md-8">
-                        <input type="text" name="Projects" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="SupportHours" class="form-label col-md-3">Support Hours</label>
-                      <div class="col-md-8">
-                        <input type="text" name="SupportHours" class="form-control">
-                      </div>
-                    </div>
                     <div class="form-group row">
                       <label for="Description" class="form-label col-md-3">Description</label>
                       <div class="col-md-8">
                         <input type="text" name="Description" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Summary" class="form-label col-md-3">Summary</label>
+                      <div class="col-md-8">
+                        <input type="text" name="Summary" class="form-control">
                       </div>
                     </div>
                       <div class="card-footer">
@@ -92,11 +70,11 @@
             </div>
           </div>
         </div>
-        <div class="modal fade show" id="ShowFactModal" role="dialog">
+        <div class="modal fade show" id="ShowSummaryModal" role="dialog">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Fact</h4>
+                <h4 class="modal-title">New Resume</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
               </div>
               <div class="modal-body">
@@ -112,5 +90,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/fact.js"></script>
+    <script src="js/customJs/summary.js"></script>
 @endsection

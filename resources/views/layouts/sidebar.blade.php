@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/fact" class="nav-link{{Request::is('fact')?'active':''}}">
+                    <a href="/fact" class="nav-link{{Request::is('')?'active':''}}">
                         <i class="nav-icon far fa-lightbulb"></i>
                         <p>
                             Facts
@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/portfolio/skills/list" class="nav-link">
+                    <a href="/skill" class="nav-link">
                         <i class="nav-icon fas fa-user-graduate"></i>
                         <p>
                             Skills
@@ -60,19 +60,19 @@
                     </a>
                     <ul class="nav nav-treeview ml-3 ">
                         <li class="nav-item">
-                            <a href="/portfolio/summary/list" class="nav-link">
+                            <a href="/resume/summary" class="nav-link">
                               <i class="fa fa-sticky-note"></i>
                                 <p class="pl-1">Summary</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/portfolio/education/list" class="nav-link">
+                            <a href="/resume/education" class="nav-link">
                                 <i class="fas fa-graduation-cap"></i>
                                 <p>Education</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/portfolio/experience/list" class="nav-link">
+                            <a href="/resume/experrience" class="nav-link">
                                  <i class="fas fa-laptop-code"></i>
                                  <p>Experience</p>
                             </a>
@@ -81,7 +81,7 @@
                   </li>
                 {{-- dropdown end  --}}
                   <li class="nav-item">
-                        <a href="/portfolio/portfolio/list" class="nav-link">
+                        <a href="/portfolio" class="nav-link">
                               <i class="nav-icon fas fa-briefcase"></i>
                               <p>
                                     Portfolio
@@ -89,7 +89,7 @@
                         </a>
                   </li>
                   <li class="nav-item">
-                        <a href="/portfolio/service/list" class="nav-link">
+                        <a href="/service" class="nav-link">
                               <i class="nav-icon fas fa-wrench"></i>
                               <p>
                                     Services
@@ -97,7 +97,7 @@
                         </a>
                   </li>
                   <li class="nav-item">
-                        <a href="/portfolio/testimonial/list" class="nav-link">
+                        <a href="/testimonial" class="nav-link">
                               <i class="nav-icon fas fa-quote-left"></i>
                               <p>
                                     Testimonials

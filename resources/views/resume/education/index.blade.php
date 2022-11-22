@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title'){{'fact'}} @endsection
+@section('title'){{'Education'}} @endsection
 @section('content')
     <div class="container py-5 col-md-12">
       <div class="row">
@@ -9,21 +9,19 @@
               <div class="card-title">
                 <h2 class="card-title">
                   <button type="button" class="btn bg-navy text-capitalize mr-3" id="AddNewBtn"><i class="fa-solid fa-circle-plus mr-2"></i>Add New</button>
-                  Fact List
+                  EducationList
                 </h2>
               </div>
               <a href="" class="btn btn-sm bg-navy float-right text-capitalize"><i class="fa fa-recycle mr-2" aria-hidden="true"></i>Vew Trash</a>
               <a href="" class="btn btn-sm bg-maroon float-right text-capitalize mr-3"><i class="fa fa-trash " aria-hidden="true"></i></a>
               {{-- table section start --}}
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover table-responsive table-borderless" id="FactList">
+                <table class="table table-hover table-responsive table-borderless" id="ExperrienceList">
                   <thead>
                     <tr>
-                      <th>Icon</th>
-                      <th>Happy Clients</th>
-                      <th>Projects</th>
-                      <th>Support Hours</th>
-                      <th>Hard Workers</th>
+                      <th>Degree Name</th>
+                      <th>Session</th>
+                      <th>Institute Name</th>
                       <th>Description</th>
                       <th>Action</th>
                     </tr>
@@ -40,40 +38,36 @@
           </div>
         </div>
         {{-- registration field Modal --}}
-        <div class="modal fade show" id="NewFactModal" role="dialog">
+        <div class="modal fade show" id="NewEducationModal" role="dialog">
           <div class="modal-dialog modal-x1">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Fact</h4>
+                <h4 class="modal-title">Add Education</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">x</span>
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/fact','method' => 'POST','class' => 'form-horizontal','id' => 'FactForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/resume/education','method' => 'POST','class' => 'form-horizontal','id' => 'EducationForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
-                      <label for="icon" class="form-label col-md-3">Icon</label>
+                      <label for="DegreeName" class="form-label col-md-3">Degree Name</label>
                       <div class="col-md-8">
-                        <input type="img" name="Icon" class="form-control">
+                        <input type="text" name="DegreeName" class="form-control">
                       </div>
                     </div>
+                  <div class="card-body">
                     <div class="form-group row">
-                      <label for="HappyClients" class="form-label col-md-3">Happy Clients</label>
+                      <label for="Session" class="form-label col-md-3">Session</label>
                       <div class="col-md-8">
-                        <input type="text" name="HappyClients" class="form-control">
+                        <input type="text" name="Session" class="form-control">
                       </div>
                     </div>
+                  <div class="card-body">
                     <div class="form-group row">
-                      <label for="Projects" class="form-label col-md-3">Projects</label>
+                      <label for="InstituteName" class="form-label col-md-3">Institute Name</label>
                       <div class="col-md-8">
-                        <input type="text" name="Projects" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="SupportHours" class="form-label col-md-3">Support Hours</label>
-                      <div class="col-md-8">
-                        <input type="text" name="SupportHours" class="form-control">
+                        <input type="text" name="InstituteName" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -92,11 +86,11 @@
             </div>
           </div>
         </div>
-        <div class="modal fade show" id="ShowFactModal" role="dialog">
+        <div class="modal fade show" id="ShowEducationModal" role="dialog">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Fact</h4>
+                <h4 class="modal-title">New Education</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
               </div>
               <div class="modal-body">
@@ -112,5 +106,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/fact.js"></script>
+    <script src="js/customJs/education.js"></script>
 @endsection

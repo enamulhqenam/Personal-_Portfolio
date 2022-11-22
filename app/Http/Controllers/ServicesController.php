@@ -14,7 +14,8 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        //
+        $Services = Services::all();
+        return view('service.index');
     }
 
     /**

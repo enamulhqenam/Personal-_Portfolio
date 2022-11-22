@@ -14,7 +14,8 @@ class ResumeController extends Controller
      */
     public function index()
     {
-        //
+        $Resumes=Resume::all();
+        return view('/resume/summary.index');
     }
 
     /**
