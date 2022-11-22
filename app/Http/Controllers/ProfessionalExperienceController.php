@@ -16,7 +16,7 @@ class ProfessionalExperienceController extends Controller
     public function index()
     {
         $Experiences = ProfessionalExperience::all();
-        return view('/resume/experience.index');
+        return view('/Resume/experience.index');
     }
 
     /**

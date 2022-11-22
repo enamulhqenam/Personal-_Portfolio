@@ -15,7 +15,7 @@ class FactsController extends Controller
     public function index()
     {
         $Fact = Facts::all();
-        return view('fact.index');
+        return view('Fact.index');
     }
 
     /**

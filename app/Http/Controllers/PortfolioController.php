@@ -15,7 +15,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $Portfolio = Portfolio::all();
-        return view('portfolio.index');
+        return view('Portfolio.index');
     }
 
     /**

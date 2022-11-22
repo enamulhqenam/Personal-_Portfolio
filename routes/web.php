@@ -37,60 +37,37 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 /* ----------About Route------------ */
-Route::resource('/about', AboutController::class);
+Route::resource('/About', AboutController::class);
 
 /* ----------Fact Route------------ */
 
-Route::resource('/fact', FactsController::class);
+Route::resource('/Fact', FactsController::class);
 
 
 /* ----------Skill Route------------ */
-Route::resource('/skill', SkillsController::class);
+Route::resource('/Skill', SkillsController::class);
 
 
 /* ----------summary Route------------ */
-Route::resource('/resume/summary',ResumeController::class,);
+Route::resource('/Resume/summary',ResumeController::class,);
 
 /* ----------Education Route------------ */
-Route::resource('/resume/education',EducationController::class);
+Route::resource('/Resume/education',EducationController::class);
 
 /* ----------Experience Route------------ */
-Route::resource('/resume/experrience',ProfessionalExperienceController::class);
+Route::resource('/Resume/experrience',ProfessionalExperienceController::class);
 
 /* ----------Portfolio Route------------ */
-Route::resource('/portfolio',PortfolioController::class);
+Route::resource('/Portfolio',PortfolioController::class);
 
 /* ----------Service Route------------ */
-Route::resource('/service',ServicesController::class);
+Route::resource('/Service',ServicesController::class);
 
 /* ----------Testimonials Route------------ */
-Route::get('/portfolio/testimonial/list',[TestimonialsController::class,'index']);
-Route::get('/portfolio/testimonial/create',[TestimonialsController::class,'create']);
-Route::post('/portfolio/testimonial/store',[TestimonialsController::class,'store']);
-Route::get('/portfolio/testimonial/show',[TestimonialsController::class,'Show']);
-Route::post('/portfolio/testimonial/update',[TestimonialsController::class,'update']);
-Route::get('/portfolio/testimonial/edit/{id}',[TestimonialsController::class,'edit']);
+Route::resource('/Testimonial',TestimonialsController::class);
 
 /* ----------Contact Route------------ */
-Route::get('/portfolio/contact/list',[AboutController::class,'index']);
-Route::get('/portfolio/contact/create',[AboutController::class,'create']);
-Route::post('/portfolio/contact/store',[AboutController::class,'store']);
-Route::get('/portfolio/contact/show',[AboutController::class,'Show']);
-Route::post('/portfolio/contact/update',[AboutController::class,'update']);
-Route::get('/portfolio/contact/edit/{id}',[AboutController::class,'edit']);
-
-/* ----------Contact Route------------ */
-Route::get('/portfolio/contact/list',[ContactController::class,'index']);
-Route::get('/portfolio/contact/create',[ContactController::class,'create']);
-Route::post('/portfolio/contact/store',[ContactController::class,'store']);
-Route::get('/portfolio/contact/show',[ContactController::class,'Show']);
-Route::post('/portfolio/contact/update',[ContactController::class,'update']);
-Route::get('/portfolio/contact/edit/{id}',[ContactController::class,'edit']);
+Route::resource('/Contact/form',ContactController::class);
 
 /* ----------Contact information Route------------ */
-Route::get('/portfolio/contactinformation/list',[ContactInformationController::class,'index']);
-Route::get('/portfolio/contactinformation/create',[ContactInformationController::class,'create']);
-Route::post('/portfolio/contactinformation/store',[ContactInformationController::class,'store']);
-Route::get('/portfolio/contactinformation/show',[ContactInformationController::class,'Show']);
-Route::post('/portfolio/contactinformation/update',[ContactInformationController::class,'update']);
-Route::get('/portfolio/contactinformation/edit/{id}',[ContactInformationController::class,'edit']);
+Route::resource('/Contact/information',ContactInformationController::class);

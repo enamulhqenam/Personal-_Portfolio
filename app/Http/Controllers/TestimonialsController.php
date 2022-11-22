@@ -14,7 +14,8 @@ class TestimonialsController extends Controller
      */
     public function index()
     {
-        //
+        $Testimonials = Testimonials::all();
+        return view('Testimonial.index');
     }
 
     /**

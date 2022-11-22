@@ -48,24 +48,30 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/portfoilo','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Portfoilo','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
-                      <label for="Titel" class="form-label col-md-3">Titel</label>
+                      <label for="Category" class="form-label col-md-3">Category</label>
                       <div class="col-md-8">
-                        <input type="text" name="Titel" class="form-control">
+                        <input type="text" name="Category" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Description" class="form-label col-md-3">Description</label>
+                      <label for="Picture" class="form-label col-md-3">Picture</label>
                       <div class="col-md-8">
-                        <input type="text" name="Description" class="form-control">
+                        <input type="text" name="Picture" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Icon" class="form-label col-md-3">Icon</label>
+                      <label for="Title" class="form-label col-md-3">Title</label>
                       <div class="col-md-8">
-                        <input type="text" name="Icon" class="form-control">
+                        <input type="text" name="Title" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Links" class="form-label col-md-3">Links</label>
+                      <div class="col-md-8">
+                        <input type="text" name="Links" class="form-control">
                       </div>
                     </div>
                       <div class="card-footer">

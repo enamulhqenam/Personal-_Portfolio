@@ -15,7 +15,7 @@ class EducationController extends Controller
     public function index()
     {
         $Educations = Education::all();
-        return view('/resume/education.index');
+        return view('/Resume/education.index');
     }
 
     /**

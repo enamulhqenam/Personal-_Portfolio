@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title'){{'Portfolio'}} @endsection
+@section('title'){{'Testimonial'}} @endsection
 @section('content')
     <div class="container py-5 col-md-12">
       <div class="row">
@@ -9,19 +9,21 @@
               <div class="card-title">
                 <h2 class="card-title">
                   <button type="button" class="btn bg-navy text-capitalize mr-3" id="AddNewBtn"><i class="fa-solid fa-circle-plus mr-2"></i>Add New</button>
-                  Portfoilo List
+                  Testimonial List
                 </h2>
               </div>
               <a href="" class="btn btn-sm bg-navy float-right text-capitalize"><i class="fa fa-recycle mr-2" aria-hidden="true"></i>Vew Trash</a>
               <a href="" class="btn btn-sm bg-maroon float-right text-capitalize mr-3"><i class="fa fa-trash " aria-hidden="true"></i></a>
               {{-- table section start --}}
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover table-responsive table-borderless" id="PortfoiloList">
+                <table class="table table-hover table-responsive table-borderless" id="TestimonialList">
                   <thead>
                     <tr>
-                      <th>Title</th>
-                      <th>Description</th>
-                      <th>Icon</th>
+                      <th>Name</th>
+                      <th>Designation</th>
+                      <th>Company</th>
+                      <th>Testimony</th>
+                      <th>Picture</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -37,34 +39,46 @@
           </div>
         </div>
         {{-- registration field Modal --}}
-        <div class="modal fade show" id="NewPortfoiloModal" role="dialog">
+        <div class="modal fade show" id="NewTestimonialModal" role="dialog">
           <div class="modal-dialog modal-x1">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Portfoilo</h4>
+                <h4 class="modal-title">New Testimonial</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">x</span>
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/portfoilo','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/testimonial','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
-                      <label for="Titel" class="form-label col-md-3">Titel</label>
+                      <label for="Name" class="form-label col-md-3">Name</label>
                       <div class="col-md-8">
-                        <input type="text" name="Titel" class="form-control">
+                        <input type="text" name="Name" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Description" class="form-label col-md-3">Description</label>
+                      <label for="Designation" class="form-label col-md-3">Designation</label>
                       <div class="col-md-8">
-                        <input type="text" name="Description" class="form-control">
+                        <input type="text" name="Designation" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Icon" class="form-label col-md-3">Icon</label>
+                      <label for="Company" class="form-label col-md-3">Company</label>
                       <div class="col-md-8">
-                        <input type="text" name="Icon" class="form-control">
+                        <input type="text" name="Company" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Testimony" class="form-label col-md-3">Testimony</label>
+                      <div class="col-md-8">
+                        <input type="text" name="Testimony" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Picture" class="form-label col-md-3">Picture</label>
+                      <div class="col-md-8">
+                        <input type="text" name="Picture" class="form-control">
                       </div>
                     </div>
                       <div class="card-footer">
@@ -77,11 +91,11 @@
             </div>
           </div>
         </div>
-        <div class="modal fade show" id="ShowPortfoiloModal" role="dialog">
+        <div class="modal fade show" id="ShowTestimonialModal" role="dialog">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">New Portfoilo</h4>
+                <h4 class="modal-title">New Testimonial</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
               </div>
               <div class="modal-body">
