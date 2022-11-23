@@ -48,7 +48,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/Portfoilo','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Portfoilo','method' => 'POST','class' => 'form-horizontal','id' => 'PortfoiloForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Category" class="form-label col-md-3">Category</label>
@@ -104,5 +104,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/service.js"></script>
+    <script src="js/customJs/portfoilo.js"></script>
 @endsection

@@ -48,7 +48,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/resume/experrience','method' => 'POST','class' => 'form-horizontal','id' => 'ExperrienceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Resume/experrience','method' => 'POST','class' => 'form-horizontal','id' => 'ExperrienceForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Titel" class="form-label col-md-3">Titel</label>

@@ -14,7 +14,7 @@ class ContactInformationController extends Controller
      */
     public function index()
     {
-        //
+        return view('Contact.information.index');
     }
 
     /**

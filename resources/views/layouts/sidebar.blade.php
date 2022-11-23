@@ -123,7 +123,7 @@
                         <li class="nav-item">
                             <a href="/Contact/form" class="nav-link">
                                 <i class="fa fa-envelope-open" aria-hidden="true"></i>
-                                <p>Send Mail</p>
+                                <p class="pl-1">Send Mail</p>
                             </a>
                         </li>
                     </ul>

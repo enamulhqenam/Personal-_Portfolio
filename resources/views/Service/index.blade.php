@@ -47,7 +47,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/service','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Service','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Titel" class="form-label col-md-3">Titel</label>

@@ -35,7 +35,7 @@
           </div>
         </div>
         {{-- registration field Modal --}}
-        <div class="modal fade show" id="NewFactModal" role="dialog">
+        <div class="modal fade show" id="NewSkillModal" role="dialog">
           <div class="modal-dialog modal-x1">
             <div class="modal-content">
               <div class="modal-header">
@@ -45,7 +45,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/skill','method' => 'POST','class' => 'form-horizontal','id' => 'SkillForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Skill','method' => 'POST','class' => 'form-horizontal','id' => 'SkillForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Name" class="form-label col-md-3">Name</label>
@@ -89,5 +89,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/fact.js"></script>
+    <script src="js/customJs/skill.js"></script>
 @endsection

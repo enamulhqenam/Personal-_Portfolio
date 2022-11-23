@@ -49,7 +49,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/testimonial','method' => 'POST','class' => 'form-horizontal','id' => 'ServiceForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Testimonial','method' => 'POST','class' => 'form-horizontal','id' => 'TestimonialForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Name" class="form-label col-md-3">Name</label>
@@ -111,5 +111,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/service.js"></script>
+    <script src="js/customJs/testimonial.js"></script>
 @endsection

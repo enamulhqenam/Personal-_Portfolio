@@ -50,7 +50,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('url' => '/fact','method' => 'POST','class' => 'form-horizontal','id' => 'FactForm' , 'file'=> true )) }}
+                {{ Form::open(array('url' => '/Fact','method' => 'POST','class' => 'form-horizontal','id' => 'FactForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="icon" class="form-label col-md-3">Icon</label>
