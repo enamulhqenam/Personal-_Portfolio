@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProfessionalExperience;
 use Illuminate\Http\Request;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class ProfessionalExperienceController extends Controller
 {
@@ -14,7 +15,8 @@ class ProfessionalExperienceController extends Controller
      */
     public function index()
     {
-        //
+        $Experiences = ProfessionalExperience::all();
+        return view('/Resume/experience.index');
     }
 
     /**

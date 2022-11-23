@@ -9,11 +9,11 @@
               <div class="card-title">
                 <h2 class="card-title">
                   <button type="button" class="btn bg-navy text-capitalize mr-3" id="AddNewBtn"><i class="fa-solid fa-circle-plus mr-2"></i>Add New</button>
-                  Income List
+                  About List
                 </h2>
               </div>
-              <a href="" class="btn btn-sm bg-navy float-right text-capitalize"><i class="fa-solid fa-recycle mr-2"></i>Vew Trash</a>
-              <a href="" class="btn btn-sm bg-maroon float-right text-capitalize mr-3"><i class="fa-solid fa-trash-can mr-2"></i></a>
+              <a href="" class="btn btn-sm bg-navy float-right text-capitalize"><i class="fa fa-recycle mr-2" aria-hidden="true"></i>Vew Trash</a>
+              <a href="" class="btn btn-sm bg-maroon float-right text-capitalize mr-3"><i class="fa fa-trash " aria-hidden="true"></i></a>
               {{-- table section start --}}
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover table-responsive table-borderless" id="AboutList">
@@ -31,6 +31,7 @@
                       <th>City</th>
                       <th>Website</th>
                       <th>Freelance</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -44,7 +45,7 @@
             </div>
           </div>
         </div>
-        {{-- registration field  --}}
+        {{-- registration field Modal --}}
         <div class="modal fade show" id="NewAboutModal" role="dialog">
           <div class="modal-dialog modal-x1">
             <div class="modal-content">
@@ -55,7 +56,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                {!! Form::open(array(('url' => '/about' ))) !!}
+                {{ Form::open(array('url' => '/About','method' => 'POST','class' => 'form-horizontal','id' => 'AboutForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
                       <label for="Name" class="form-label col-md-3">Name</label>
@@ -125,7 +126,7 @@
                     </div>
                     <div class="col-md-12 form-group row">
                       <div class="form-group row col-md-6">
-                          <label for="Freelance" class="form-label col-md-3">Freelance :</label>
+                          <label for="Freelance" class="form-label col-md-3">Freelance</label>
                           <div class="col-md-8 mx-md-2">
                               <input type="check" name="Freelance" class="form-control" > 
                           </div>
@@ -136,9 +137,12 @@
                               <input type="check" name="Freelace" class="form-control" > 
                           </div>
                       </div>
+                      <div class="card-footer">
+                        <input type="submit" id="submitBtn" class="btn bg-navy float-right w-25 text-capitalize">
+                      </div>
                   </div>
                   </div>
-                {!! Form::close() !!}
+                {{ Form::close() }}
               </div>
             </div>
           </div>
@@ -162,4 +166,6 @@
         </div>
       </div>
     </div>
+
+    <script src="js/customJs/about.js"></script>
 @endsection
