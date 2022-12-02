@@ -167,5 +167,6 @@
       </div>
     </div>
 
-    <script src="/js/customJs/about.js"></script>
+    <script src="js/about.js">
+    </script>
 @endsection
