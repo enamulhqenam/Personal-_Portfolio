@@ -112,5 +112,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/fact.js"></script>
+    <script src="js/fact.js"></script>
 @endsection
