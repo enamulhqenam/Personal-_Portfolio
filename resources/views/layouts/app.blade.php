@@ -30,10 +30,13 @@
         {{-- <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css"> --}}
         <!-- summernote -->
         <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
-        
-        {{-- vite --}}
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
+    
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    {{-- vite --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <body class="font-sans antialiased hold-transition sidebar-mini sidebar-collapse">
         {{-- <div class="min-h-screen bg-gray-100">
           @include('layouts.navigation')
@@ -128,8 +131,7 @@
                 </section>
             </div>
         </main>
-        <!-- jQuery -->
-        <script src="/plugins/jquery/jquery.min.js"></script>
+        
         <!-- jQuery UI 1.11.4 -->
         <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
