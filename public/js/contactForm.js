@@ -4,21 +4,22 @@ $(document).ready(function(){
       
       $('#AddNewBtn').on('click',function(e){
             e.preventDefault();
-            $('#NewSkillModal').modal('show');
+            console.log('dadded');
+            $('#NewContactModal').modal('show');
       });
-      $('#formREsetBtn').on('click',function(e){
+      $('#formResetBtn').on('click',function(e){
             e.preventDefault();
-            $('#SkillForm')[0].reset();
+            $('#ContactForm')[0].reset();
       });
 
       $('#submitBtn').on('click',function(e){
             e.preventDefault();
             $.ajax({
                   type: "POST",
-                  url: "/Skill",
-                  data: $('#SkillForm').serialize(),success:function(data){
-                        $('#SkillFormu')[0].reset();
-                        $('#NewSkillModal').modal('hide');
+                  url: "/Contact/form",
+                  data: $('#ContactForm').serialize(),success:function(data){
+                        $('#ContactForm')[0].reset();
+                        $('#NewContactModal').modal('hide');
                   },
                   error:function(data){
                         console.log('Error While added new Aboute Itemes'+data);

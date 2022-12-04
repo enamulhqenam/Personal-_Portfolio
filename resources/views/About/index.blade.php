@@ -65,12 +65,6 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Name" class="form-label col-md-3">Name</label>
-                      <div class="col-md-8">
-                        <input type="text" name="Name" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group row">
                       <label for="AboutMe" class="form-label col-md-3">About Me</label>
                       <div class="col-md-8">
                         <input type="text" name="AboutMe" class="form-control">
@@ -89,7 +83,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="Photo" class="form-label col-md-3">Photo</label>
+                      <label for="text" class="form-label col-md-3">Photo</label>
                       <div class="col-md-8">
                         <input type="img" name="Photo" class="form-control">
                       </div>
@@ -128,17 +122,18 @@
                       <div class="form-group row col-md-6">
                           <label for="Freelance" class="form-label col-md-3">Freelance</label>
                           <div class="col-md-8 mx-md-2">
-                              <input type="check" name="Freelance" class="form-control" > 
+                              <input type="text" name="Freelance" class="form-control" > 
                           </div>
                       </div>
                       <div class="form-group row col-md-6">
                           <label for="Non Freelace" class="form-label col-md-3">Non Freelance</label>
                           <div class="col-md-8 mx-md-2">
-                              <input type="check" name="Freelace" class="form-control" > 
+                              <input type="text" name="Freelace" class="form-control" > 
                           </div>
                       </div>
                       <div class="card-footer">
-                        <input type="submit" id="submitBtn" class="btn bg-navy float-right w-25 text-capitalize">
+                        <input type="submit" name="submit" id="submitBtn" class="btn bg-navy float-left text-capitalize">
+                        <button type="button" id="formResetBtn" class="btn btn-warning float-right ">Reset</button>
                       </div>
                   </div>
                   </div>
@@ -166,7 +161,6 @@
         </div>
       </div>
     </div>
-
     <script src="js/about.js">
     </script>
 @endsection

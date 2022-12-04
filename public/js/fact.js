@@ -1,5 +1,4 @@
 $(document).ready(function(){
-      $.noConflict();
 
       // var FactList = $('#FactList').DataTable({
       //       processing : true,
@@ -25,20 +24,23 @@ $(document).ready(function(){
             e.preventDefault();
             $('#NewFactModal').modal('show');
       });
+      $('#formResetBtn').on('click',function(e){
+            e.preventDefault();
+            $('#FactForm')[0].reset();
+      })
 
-      // $('#submitBtn').on('click',function(e){
-      //       e.preventDefault();
-
-      //       $.ajax({
-      //             type  : "POST",
-      //             url   : "/fact",
-      //             data  : $('#FactForm').serialize(),success:function(data){
-      //                   $('#FactForm')[0].reset();
-      //                   $('#NewFactModal').modal('hide');
-      //             },
-      //             error:function(data){
-      //                   console.log('Error while added new Fact Item'+data);
-      //             },
-      //       });
-      // });
+      $('#submitBtn').on('click',function(e){
+            e.preventDefault();
+            $.ajax({
+                  type  : "POST",
+                  url   : "/Fact",
+                  data  : $('#FactForm').serialize(),success:function(data){
+                        $('#FactForm')[0].reset();
+                        $('#NewFactModal').modal('hide');
+                  },
+                  error:function(data){
+                        console.log('Error while added new Fact Item'+data);
+                  },
+            });
+      });
 });

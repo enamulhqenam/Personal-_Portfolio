@@ -76,9 +76,10 @@
                         <input type="text" name="Description" class="form-control">
                       </div>
                     </div>
-                      <div class="card-footer">
-                        <input type="submit" id="submitBtn" class="btn bg-navy float-right w-25 text-capitalize">
-                      </div>
+                    <div class="card-footer">
+                      <input type="submit" name="submit" id="submitBtn" class="btn bg-navy float-left text-capitalize">
+                      <button type="button" id="formResetBtn" class="btn btn-warning float-right ">Reset</button>
+                    </div>
                   </div>
                   </div>
                 {{ Form::close() }}
@@ -106,5 +107,5 @@
       </div>
     </div>
 
-    <script src="js/customJs/education.js"></script>
+    <script src="../js/education.js"></script>
 @endsection

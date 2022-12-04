@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Facts;
+use Exception;
 use Illuminate\Http\Request;
 
 class FactsController extends Controller
@@ -25,7 +26,8 @@ class FactsController extends Controller
      */
     public function create()
     {
-        //
+        $Facts = Facts::all();
+        return view('Fact.index',compact('Facts'));
     }
 
     /**
@@ -36,7 +38,13 @@ class FactsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Facts::create($request->all());
+            return "Data added Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
     }
 
     /**

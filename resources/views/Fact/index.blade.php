@@ -53,9 +53,9 @@
                 {{ Form::open(array('url' => '/Fact','method' => 'POST','class' => 'form-horizontal','id' => 'FactForm' , 'file'=> true )) }}
                   <div class="card-body">
                     <div class="form-group row">
-                      <label for="icon" class="form-label col-md-3">Icon</label>
+                      <label for="Icon" class="form-label col-md-3">Icon</label>
                       <div class="col-md-8">
-                        <input type="img" name="Icon" class="form-control">
+                        <input type="text" name="Icon" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -82,9 +82,10 @@
                         <input type="text" name="Description" class="form-control">
                       </div>
                     </div>
-                      <div class="card-footer">
-                        <input type="submit" id="submitBtn" class="btn bg-navy float-right w-25 text-capitalize">
-                      </div>
+                    <div class="card-footer">
+                      <input type="submit" name="submit" id="submitBtn" class="btn bg-navy float-left text-capitalize">
+                      <button type="button" id="formResetBtn" class="btn btn-warning float-right ">Reset</button>
+                    </div>
                   </div>
                   </div>
                 {{ Form::close() }}

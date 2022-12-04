@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use Exception;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -25,7 +26,8 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        $Abouts = About::all();
+        return view('About.index',compact('Abouts'));
     }
 
     /**
@@ -36,7 +38,13 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            About::create($request->all());
+            return "Data Added Successfully";
+        }
+        catch(Exception $error){
+            return $error->getMessage();
+        }
     }
 
     /**
