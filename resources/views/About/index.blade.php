@@ -83,9 +83,9 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="text" class="form-label col-md-3">Photo</label>
+                      <label for="Photo" class="form-label col-md-3">Photo</label>
                       <div class="col-md-8">
-                        <input type="img" name="Photo" class="form-control">
+                        <input type="file" name="Photo" class="form-control">
                       </div>
                     </div>
                     <div class="form-group row">

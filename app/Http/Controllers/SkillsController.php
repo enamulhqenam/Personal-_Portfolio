@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skills;
+use Exception;
 use Illuminate\Http\Request;
 
 class SkillsController extends Controller
@@ -25,7 +26,8 @@ class SkillsController extends Controller
      */
     public function create()
     {
-        //
+        $Skills = Skills::all();
+        return view('Skill.index',compact('Skills'));
     }
 
     /**
@@ -36,7 +38,13 @@ class SkillsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Skills::create($request->all());
+            return "Data Added Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
     }
 
     /**

@@ -64,7 +64,7 @@
                     <div class="form-group row">
                       <label for="Icon" class="form-label col-md-3">Icon</label>
                       <div class="col-md-8">
-                        <input type="text" name="Icon" class="form-control">
+                        <input type="file" name="Icon" class="form-control">
                       </div>
                     </div>
                     <div class="card-footer">

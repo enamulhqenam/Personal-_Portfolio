@@ -78,7 +78,7 @@
                     <div class="form-group row">
                       <label for="Picture" class="form-label col-md-3">Picture</label>
                       <div class="col-md-8">
-                        <input type="text" name="Picture" class="form-control">
+                        <input type="file" name="Picture" class="form-control">
                       </div>
                     </div>
                     <div class="card-footer">

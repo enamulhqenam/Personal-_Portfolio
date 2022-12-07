@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Services;
+use Exception;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -25,7 +26,8 @@ class ServicesController extends Controller
      */
     public function create()
     {
-        //
+        $Servicess = Services::all();
+        return view('Service.index',compact('Servicess'));
     }
 
     /**
@@ -36,7 +38,14 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Services::create($request->all());
+            return "Data Added Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
+        
     }
 
     /**

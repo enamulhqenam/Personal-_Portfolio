@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Education;
+use Exception;
 use Illuminate\Http\Request;
 
 class EducationController extends Controller
@@ -25,7 +26,8 @@ class EducationController extends Controller
      */
     public function create()
     {
-        //
+        $Educations = Education::all();
+        return view('Resume.education.index');
     }
 
     /**
@@ -36,7 +38,13 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Education::create($request->all());
+            return "Data Added Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
     }
 
     /**

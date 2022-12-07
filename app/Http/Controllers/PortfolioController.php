@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
+use Exception;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -25,7 +26,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        //
+        $Portfolios = Portfolio::all();
+        return view('Portfolio.index', compact('Portfolios'));
     }
 
     /**
@@ -36,7 +38,14 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Portfolio::create($request->all());
+            return "Data Added Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
+
     }
 
     /**

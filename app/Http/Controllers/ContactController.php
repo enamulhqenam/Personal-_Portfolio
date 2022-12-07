@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use Exception;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -24,7 +25,8 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $ContactFroms = Contact::all();
+        return view('Contact.form.index', compact('ContactFroms'));
     }
 
     /**
@@ -35,7 +37,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Contact::create($request->all());
+            return "Data Addes Successfully";
+        }
+        catch(Exception $error){
+            $error->getMessage();
+        }
+        
     }
 
     /**
